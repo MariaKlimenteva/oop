@@ -1,4 +1,7 @@
 project("text_quest")
 
-add_executable(text_quest main.cpp)
-set_property(TARGET text_quest PROPERTY CXX_STANDARD 20)
+file(GLOB QUEST_SRC "text_quest/src/*")
+
+add_executable(text_quest ${QUEST_SRC})
+
+target_include_directories(text_quest PRIVATE "text_quest/include")
