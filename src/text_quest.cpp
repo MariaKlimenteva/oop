@@ -1,6 +1,6 @@
-#include "text_guest.h"
+#include "text_quest.h"
 
-Kitchen::introduce_room()
+void Kitchen::introduce_room()
 {
     std::cout << "You're in the kitchen. What will you do?\n" << std::endl;
     std::cout << " 1) Go back\n 2) Drink some water\n 3) Take a sandwiche\n " << std::endl;
@@ -10,7 +10,7 @@ Kitchen::introduce_room()
     }
 }
 
-Kitchen::action()
+void Kitchen::action()
 {
     std::cin >> number;
     switch (number)
@@ -21,7 +21,7 @@ Kitchen::action()
     }
 }
 
-Bedroom::introduce_room()
+void Bedroom::introduce_room()
 {
     std::cout << "You're in the living room. What will you do?\n 1) Turn on the TV\n 2) Go to the bad\n 3) Go back!\n" << std::endl;
     while(1)
@@ -30,7 +30,7 @@ Bedroom::introduce_room()
     }
 }
 
-Bedroom::action()
+void Bedroom::action()
 {
     std::cin >> number;
     switch (number)
@@ -52,7 +52,7 @@ Bedroom::action()
     }
 }
 
-Livingroom::introduce_room()
+void Livingroom::introduce_room()
 {
     std::cout << "It's living room. Options:\n 1) Take a book\n 2) Open a window\n 3) Go back\n" << std::endl;
     while(1)
@@ -61,7 +61,7 @@ Livingroom::introduce_room()
     }
 }
 
-Livingroom::action()
+void Livingroom::action()
 {
     std::cin >> number;
     switch (number)
@@ -86,7 +86,7 @@ Livingroom::action()
     }
 }
 
-Hallway::introduce_room()
+void Hallway::introduce_room()
 {
     std::cout << "You're in the hallway. There are 3 doors in front of you. What will you do?\n" << std::endl;  
     std::cout << "Options (enter the number): \n 1) Walk down the corridor\n 2) Open the door to the kitchen\n 3) Open the bedroom door\n 4) Open the door to the living room\n" << std::endl;
@@ -96,7 +96,7 @@ Hallway::introduce_room()
     }
 }
 
-Hallway::action()
+void Hallway::action()
 {
     std::cin >> number;
     switch (number)
@@ -123,7 +123,7 @@ Hallway::action()
     }
 }
 
-Hallway::go()
+void Hallway::go()
 {
     std::cout << "You walked along the corridor, but did not choose any door\n" << std::endl;
     action();
