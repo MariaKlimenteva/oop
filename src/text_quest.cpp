@@ -1,5 +1,11 @@
 #include "text_quest.h"
 
+void Room::go_back()
+{
+    Hallway room_1;
+    room_1.introduce_room;
+}
+
 void Kitchen::introduce_room()
 {
     std::cout << "You're in the kitchen. What will you do?\n" << std::endl;

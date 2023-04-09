@@ -3,6 +3,8 @@
 
 #include <iostream>
 
+class Hallway;
+
 class Room
 {
  protected:
@@ -10,11 +12,7 @@ class Room
     int flag = 0;
  public:
     virtual void introduce_room() = 0;
-    void go_back()
-    {
-        Hallway room_1;
-        room_1.introduce_room;
-    }
+    void go_back();
 };
 
 class Kitchen : public Room
@@ -56,4 +54,4 @@ class Game
     // }
 };
 
-#endif //TEXT_GUEST
+#endif //TEXT_GUEST  
